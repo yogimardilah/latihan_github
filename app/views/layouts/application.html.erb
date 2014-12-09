@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toserba</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render 'shareds/header_top' %>
+<% if params[:action]== 'home'%>
+<%= render "shareds/footer_bottom" %>
+<% end %>
+<%= yield %>
+<%= render 'shareds/footer_bottom' %>
+<!-- <%=javascript_include_tag 'aplication','datajs'=>true %> -->
+</body>
+</html>
